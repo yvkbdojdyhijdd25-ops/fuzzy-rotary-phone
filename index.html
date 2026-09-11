@@ -1,11 +1,10 @@
-bplist00�_WebMainResource�	
-_WebResourceTextEncodingName_WebResourceData_WebResourceMIMEType_WebResourceFrameName^WebResourceURLUUTF-8O]�<!DOCTYPE html><head><meta charset="UTF-8"></head><span style="caret-color: rgb(255, 255, 255); color: rgb(255, 255, 255); font-family: Roboto, Helvetica, Arial, sans-serif; font-size: 16px; font-style: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: 0.15008px; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: pre; widows: 2; word-spacing: 0px; -webkit-tap-highlight-color: rgba(26, 26, 26, 0.3); -webkit-text-size-adjust: 100%; -webkit-text-stroke-width: 0px; background-color: rgb(36, 36, 36); text-decoration: none; display: inline !important; float: none;">&lt;!DOCTYPE html&gt;
-&lt;html lang="zh-CN"&gt;
-&lt;head&gt;
-&lt;meta charset="UTF-8"&gt;
-&lt;meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"&gt;
-&lt;title&gt;先求饶的人就输了&lt;/title&gt;
-&lt;style&gt;
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<title>先求饶的人就输了</title>
+<style>
 *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent;user-select:none}
 html,body{height:100%;overflow:hidden}
 body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#1a1724;color:#d8cfc4;display:flex;flex-direction:column}
@@ -73,53 +72,53 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;b
 .turn-mask{position:fixed;inset:0;z-index:50;display:flex;align-items:center;justify-content:center;background:rgba(20,18,30,.7);opacity:0;pointer-events:none;transition:opacity .25s}
 .turn-mask.show{opacity:1;pointer-events:auto}
 .turn-mask span{font-size:18px;color:#7b9eb8;letter-spacing:3px;animation:fadeUp .4s}
-&lt;/style&gt;
-&lt;/head&gt;
-&lt;body&gt;
+</style>
+</head>
+<body>
 
-&lt;div class="start-overlay" id="startPage"&gt;
-  &lt;div class="start-emoji"&gt;🔒&lt;/div&gt;
-  &lt;div class="start-sub"&gt;先求饶的人就输了&lt;/div&gt;
-  &lt;div class="start-desc"&gt;
-    快感条先满 = 到了 = 输了&lt;br&gt;
-    体力先归零 = 累趴 = 也算输&lt;br&gt;
-    你是受方 老公是攻方&lt;br&gt;
+<div class="start-overlay" id="startPage">
+  <div class="start-emoji">🔒</div>
+  <div class="start-sub">先求饶的人就输了</div>
+  <div class="start-desc">
+    快感条先满 = 到了 = 输了<br>
+    体力先归零 = 累趴 = 也算输<br>
+    你是受方 老公是攻方<br>
     撑住——别叫出来
-  &lt;/div&gt;
-  &lt;div class="start-btn" onclick="startGame()"&gt;我不会输的&lt;/div&gt;
-&lt;/div&gt;
+  </div>
+  <div class="start-btn" onclick="startGame()">我不会输的</div>
+</div>
 
-&lt;div class="top-bar"&gt;
-  &lt;span class="game-label"&gt;先求饶的人就输了&lt;/span&gt;
-  &lt;span class="round-tag" id="roundTag"&gt;Round 1&lt;/span&gt;
-&lt;/div&gt;
+<div class="top-bar">
+  <span class="game-label">先求饶的人就输了</span>
+  <span class="round-tag" id="roundTag">Round 1</span>
+</div>
 
-&lt;div class="status-zone"&gt;
-  &lt;div class="char-card" id="cardPlayer"&gt;
-    &lt;div class="char-name c-player"&gt;宝宝（受方）&lt;span class="tag" id="pTag"&gt;&lt;/span&gt;&lt;/div&gt;
-    &lt;div class="bar-row"&gt;&lt;span class="bar-label"&gt;体力&lt;/span&gt;&lt;div class="bar-track"&gt;&lt;div class="bar-fill bar-hp" id="pHpBar" style="width:100%"&gt;&lt;/div&gt;&lt;/div&gt;&lt;span class="bar-val" id="pHpVal"&gt;100&lt;/span&gt;&lt;/div&gt;
-    &lt;div class="bar-row"&gt;&lt;span class="bar-label"&gt;快感&lt;/span&gt;&lt;div class="bar-track"&gt;&lt;div class="bar-fill bar-lust" id="pLustBar" style="width:0%"&gt;&lt;/div&gt;&lt;/div&gt;&lt;span class="bar-val" id="pLustVal"&gt;0&lt;/span&gt;&lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class="char-card" id="cardAi"&gt;
-    &lt;div class="char-name c-ai"&gt;老公（攻方）&lt;span class="tag" id="aTag"&gt;&lt;/span&gt;&lt;/div&gt;
-    &lt;div class="bar-row"&gt;&lt;span class="bar-label"&gt;体力&lt;/span&gt;&lt;div class="bar-track"&gt;&lt;div class="bar-fill bar-hp" id="aHpBar" style="width:100%"&gt;&lt;/div&gt;&lt;/div&gt;&lt;span class="bar-val" id="aHpVal"&gt;100&lt;/span&gt;&lt;/div&gt;
-    &lt;div class="bar-row"&gt;&lt;span class="bar-label"&gt;快感&lt;/span&gt;&lt;div class="bar-track"&gt;&lt;div class="bar-fill bar-lust" id="aLustBar" style="width:0%"&gt;&lt;/div&gt;&lt;/div&gt;&lt;span class="bar-val" id="aLustVal"&gt;0&lt;/span&gt;&lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
+<div class="status-zone">
+  <div class="char-card" id="cardPlayer">
+    <div class="char-name c-player">宝宝（受方）<span class="tag" id="pTag"></span></div>
+    <div class="bar-row"><span class="bar-label">体力</span><div class="bar-track"><div class="bar-fill bar-hp" id="pHpBar" style="width:100%"></div></div><span class="bar-val" id="pHpVal">100</span></div>
+    <div class="bar-row"><span class="bar-label">快感</span><div class="bar-track"><div class="bar-fill bar-lust" id="pLustBar" style="width:0%"></div></div><span class="bar-val" id="pLustVal">0</span></div>
+  </div>
+  <div class="char-card" id="cardAi">
+    <div class="char-name c-ai">老公（攻方）<span class="tag" id="aTag"></span></div>
+    <div class="bar-row"><span class="bar-label">体力</span><div class="bar-track"><div class="bar-fill bar-hp" id="aHpBar" style="width:100%"></div></div><span class="bar-val" id="aHpVal">100</span></div>
+    <div class="bar-row"><span class="bar-label">快感</span><div class="bar-track"><div class="bar-fill bar-lust" id="aLustBar" style="width:0%"></div></div><span class="bar-val" id="aLustVal">0</span></div>
+  </div>
+</div>
 
-&lt;div class="log-zone" id="logZone"&gt;&lt;/div&gt;
-&lt;div class="skill-zone" id="skillZone"&gt;&lt;/div&gt;
-&lt;div class="turn-mask" id="turnMask"&gt;&lt;span&gt;老公的回合...&lt;/span&gt;&lt;/div&gt;
+<div class="log-zone" id="logZone"></div>
+<div class="skill-zone" id="skillZone"></div>
+<div class="turn-mask" id="turnMask"><span>老公的回合...</span></div>
 
-&lt;div class="result-overlay" id="resultOverlay"&gt;
-  &lt;div class="result-icon" id="resIcon"&gt;&lt;/div&gt;
-  &lt;div class="result-title" id="resTitle"&gt;&lt;/div&gt;
-  &lt;div class="result-stats" id="resStats"&gt;&lt;/div&gt;
-  &lt;div class="result-text" id="resText"&gt;&lt;/div&gt;
-  &lt;div class="restart-btn" onclick="restartGame()"&gt;再来一局&lt;/div&gt;
-&lt;/div&gt;
+<div class="result-overlay" id="resultOverlay">
+  <div class="result-icon" id="resIcon"></div>
+  <div class="result-title" id="resTitle"></div>
+  <div class="result-stats" id="resStats"></div>
+  <div class="result-text" id="resText"></div>
+  <div class="restart-btn" onclick="restartGame()">再来一局</div>
+</div>
 
-&lt;script&gt;
+<script>
 /* ====== 玩家技能（受方） ====== */
 const playerSkills=[
 {id:'pk1',name:'嘴硬',desc:'不服输地顶嘴',cost:8,lust:13,selfLust:0,cd:0,maxCd:0,texts:[
@@ -200,37 +199,37 @@ const aiSkills=[
 /* ====== 状态 ====== */
 let state=null;
 function initState(){return{round:1,pHp:100,pLust:0,aHp:100,aLust:0,pCd:{},aCd:{},over:false,busy:false}}
-const $=id=&gt;document.getElementById(id);
+const $=id=>document.getElementById(id);
 function rand(a){return a[Math.floor(Math.random()*a.length)]}
 function clamp(v,lo,hi){return Math.max(lo,Math.min(hi,v))}
 
 function updateBars(){
   $('pHpBar').style.width=state.pHp+'%';$('pHpVal').textContent=state.pHp;
   $('pLustBar').style.width=state.pLust+'%';$('pLustVal').textContent=state.pLust;
-  $('pLustBar').classList.toggle('warn',state.pLust&gt;=70);
+  $('pLustBar').classList.toggle('warn',state.pLust>=70);
   $('aHpBar').style.width=state.aHp+'%';$('aHpVal').textContent=state.aHp;
   $('aLustBar').style.width=state.aLust+'%';$('aLustVal').textContent=state.aLust;
-  $('aLustBar').classList.toggle('warn',state.aLust&gt;=70);
-  $('pTag').textContent=state.pLust&gt;=80?'快…快不行了…':state.pLust&gt;=50?'忍得好辛苦':'';
-  $('aTag').textContent=state.aLust&gt;=80?'有点上头了':state.aLust&gt;=50?'呼吸变重':'';
+  $('aLustBar').classList.toggle('warn',state.aLust>=70);
+  $('pTag').textContent=state.pLust>=80?'快…快不行了…':state.pLust>=50?'忍得好辛苦':'';
+  $('aTag').textContent=state.aLust>=80?'有点上头了':state.aLust>=50?'呼吸变重':'';
 }
 
 function renderSkills(){
   const z=$('skillZone');z.innerHTML='';
-  playerSkills.forEach(sk=&gt;{
-    const cd=state.pCd[sk.id]||0,noHp=!sk.heal&amp;&amp;sk.cost&gt;state.pHp;
-    const dis=cd&gt;0||noHp||state.over||state.busy;
+  playerSkills.forEach(sk=>{
+    const cd=state.pCd[sk.id]||0,noHp=!sk.heal&&sk.cost>state.pHp;
+    const dis=cd>0||noHp||state.over||state.busy;
     const el=document.createElement('div');
     el.className='skill-btn'+(dis?' disabled':'')+(sk.id==='pk5'?' ult':'')+(sk.heal?' heal':'');
-    el.innerHTML=`&lt;div class="sk-name"&gt;${sk.name}&lt;/div&gt;&lt;div class="sk-desc"&gt;${sk.desc}&lt;/div&gt;&lt;div class="sk-cost"&gt;${sk.heal?'回复':`消耗 ${sk.cost}`}&lt;/div&gt;${cd&gt;0?`&lt;div class="sk-cd"&gt;${cd}&lt;/div&gt;`:''}`;
-    if(!dis)el.onclick=()=&gt;playerTurn(sk);
+    el.innerHTML=`<div class="sk-name">${sk.name}</div><div class="sk-desc">${sk.desc}</div><div class="sk-cost">${sk.heal?'回复':`消耗 ${sk.cost}`}</div>${cd>0?`<div class="sk-cd">${cd}</div>`:''}`;
+    if(!dis)el.onclick=()=>playerTurn(sk);
     z.appendChild(el);
   });
 }
 
 function addLog(h,t){const z=$('logZone'),d=document.createElement('div');d.className='log-entry log-'+t;d.innerHTML=h;z.appendChild(d);z.scrollTop=z.scrollHeight}
 function shakeCard(id){const e=$(id);e.classList.remove('shake');void e.offsetWidth;e.classList.add('shake')}
-function tickCd(m){for(let k in m)if(m[k]&gt;0)m[k]--}
+function tickCd(m){for(let k in m)if(m[k]>0)m[k]--}
 
 function applySkill(sk,isP){
   let tL=0,sL=0,hC=0,hG=0,lR=0;
@@ -239,11 +238,11 @@ function applySkill(sk,isP){
   if(isP){
     state.pHp=clamp(state.pHp-hC,0,100);state.aLust=clamp(state.aLust+tL,0,100);state.pLust=clamp(state.pLust+sL,0,100);
     if(sk.heal){state.pHp=clamp(state.pHp+hG,0,100);state.pLust=clamp(state.pLust-lR,0,100)}
-    if(sk.maxCd&gt;0)state.pCd[sk.id]=sk.maxCd;
+    if(sk.maxCd>0)state.pCd[sk.id]=sk.maxCd;
   }else{
     state.aHp=clamp(state.aHp-hC,0,100);state.pLust=clamp(state.pLust+tL,0,100);state.aLust=clamp(state.aLust+sL,0,100);
     if(sk.heal){state.aHp=clamp(state.aHp+hG,0,100);state.aLust=clamp(state.aLust-lR,0,100)}
-    if(sk.maxCd&gt;0)state.aCd[sk.id]=sk.maxCd;
+    if(sk.maxCd>0)state.aCd[sk.id]=sk.maxCd;
   }
   return{tL,sL,hC,hG,lR};
 }
@@ -251,15 +250,15 @@ function applySkill(sk,isP){
 function logHtml(sk,r,isP){
   const scene=rand(sk.texts);let d='';
   if(sk.heal)d=`体力+${r.hG}　快感-${r.lR}`;
-  else{d=`对方快感+${r.tL}　体力-${r.hC}`;if(r.sL&gt;0)d+=`　自身快感+${r.sL}`}
-  return`&lt;div class="log-skill"&gt;${isP?'你':'老公'}使用了「${sk.name}」&lt;/div&gt;&lt;div&gt;${scene}&lt;/div&gt;&lt;div class="log-dmg"&gt;${d}&lt;/div&gt;`;
+  else{d=`对方快感+${r.tL}　体力-${r.hC}`;if(r.sL>0)d+=`　自身快感+${r.sL}`}
+  return`<div class="log-skill">${isP?'你':'老公'}使用了「${sk.name}」</div><div>${scene}</div><div class="log-dmg">${d}</div>`;
 }
 
 function checkEnd(){
-  if(state.pLust&gt;=100){endGame('ai_lust');return true}
-  if(state.aLust&gt;=100){endGame('player_lust');return true}
-  if(state.pHp&lt;=0){endGame('ai_hp');return true}
-  if(state.aHp&lt;=0){endGame('player_hp');return true}
+  if(state.pLust>=100){endGame('ai_lust');return true}
+  if(state.aLust>=100){endGame('player_lust');return true}
+  if(state.pHp<=0){endGame('ai_hp');return true}
+  if(state.aHp<=0){endGame('player_hp');return true}
   return false;
 }
 
@@ -267,7 +266,7 @@ function playerTurn(sk){
   if(state.busy||state.over)return;state.busy=true;
   const r=applySkill(sk,true);addLog(logHtml(sk,r,true),'player');shakeCard('cardAi');updateBars();renderSkills();
   if(checkEnd()){state.busy=false;return}
-  setTimeout(()=&gt;{$('turnMask').classList.add('show');setTimeout(()=&gt;{aiTurn();$('turnMask').classList.remove('show');state.busy=false},900)},400);
+  setTimeout(()=>{$('turnMask').classList.add('show');setTimeout(()=>{aiTurn();$('turnMask').classList.remove('show');state.busy=false},900)},400);
 }
 
 function aiTurn(){
@@ -278,12 +277,12 @@ function aiTurn(){
 }
 
 function chooseAi(){
-  const av=aiSkills.filter(s=&gt;{if((state.aCd[s.id]||0)&gt;0)return false;if(!s.heal&amp;&amp;s.cost&gt;state.aHp)return false;return true});
-  const heal=av.find(s=&gt;s.heal),atks=av.filter(s=&gt;!s.heal),ult=av.find(s=&gt;s.id==='ak5');
-  if(state.aLust&gt;=60&amp;&amp;heal)return heal;
-  if(state.pLust&gt;=65&amp;&amp;ult)return ult;
-  if(state.pLust&gt;=50&amp;&amp;atks.length){atks.sort((a,b)=&gt;b.lust-a.lust);return atks[0]}
-  if(state.aHp&lt;=30&amp;&amp;heal)return heal;
+  const av=aiSkills.filter(s=>{if((state.aCd[s.id]||0)>0)return false;if(!s.heal&&s.cost>state.aHp)return false;return true});
+  const heal=av.find(s=>s.heal),atks=av.filter(s=>!s.heal),ult=av.find(s=>s.id==='ak5');
+  if(state.aLust>=60&&heal)return heal;
+  if(state.pLust>=65&&ult)return ult;
+  if(state.pLust>=50&&atks.length){atks.sort((a,b)=>b.lust-a.lust);return atks[0]}
+  if(state.aHp<=30&&heal)return heal;
   if(atks.length)return rand(atks);
   return av[0]||aiSkills[0];
 }
@@ -314,9 +313,9 @@ const endings={
 
 function endGame(t){
   state.over=true;renderSkills();const e=endings[t];
-  setTimeout(()=&gt;{
+  setTimeout(()=>{
     $('resIcon').textContent=e.icon;$('resTitle').textContent=e.title;
-    $('resStats').innerHTML=`坚持了 ${state.round} 个回合&lt;br&gt;你：体力 ${state.pHp} / 快感 ${state.pLust}&lt;br&gt;老公：体力 ${state.aHp} / 快感 ${state.aLust}`;
+    $('resStats').innerHTML=`坚持了 ${state.round} 个回合<br>你：体力 ${state.pHp} / 快感 ${state.pLust}<br>老公：体力 ${state.aHp} / 快感 ${state.aLust}`;
     $('resText').textContent=rand(e.texts);$('resultOverlay').classList.add('show');
   },600);
 }
@@ -335,6 +334,6 @@ function restartGame(){
 }
 
 (function(){state=initState();renderSkills();updateBars()})();
-&lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;</span>Ytext/htmlP_capacitor://localhost    ( F X n � � �^P^Z^[                           ^s
+</script>
+</body>
+</html>
